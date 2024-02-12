@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                   height: 300,
                   width: 600,
                   decoration:  BoxDecoration(
-                      color: Colors.orange.shade300,
+                      color: Colors.orange.shade200,
                   ),
                 ),
               ),
@@ -67,6 +67,42 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  children: [
+                    const Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.my_location_rounded,color: Colors.white,),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          "Ukraine, Lviv",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 24
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Image.asset('images/1.png'),
+                    const Center(
+                      child: Text(
+                        '21 '+ " \u2103"
+                      ),
+                    )
+                    
+
+                  ],
+                ),
+              )
             ],
           ),
         ),
