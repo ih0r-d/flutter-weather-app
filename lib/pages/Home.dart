@@ -98,8 +98,6 @@ class HomePage extends StatelessWidget {
                         '21 '+ " \u2103"
                       ),
                     )
-                    
-
                   ],
                 ),
               )

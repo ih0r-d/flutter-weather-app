@@ -6,6 +6,7 @@ import 'package:weather/weather.dart';
 import '../data/constants.dart';
 
 part 'weather_event.dart';
+
 part 'weather_state.dart';
 
 class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
@@ -14,7 +15,6 @@ class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
       emit(WeatherBlocLoading());
       try {
         WeatherFactory wf = WeatherFactory(API_KEY, language: Language.ENGLISH);
-
         Weather weather = await wf.currentWeatherByLocation(
           event.position.latitude,
           event.position.longitude,
